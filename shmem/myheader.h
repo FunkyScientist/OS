@@ -1,9 +1,9 @@
-#include <errno.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/shm.h>
+#include<errno.h>
+#include<fcntl.h>
+#include<stdio.h>
+#include<string.h>
+#include<unistd.h>
+#include<sys/shm.h>
 
 #define BUFSIZE 3
 
