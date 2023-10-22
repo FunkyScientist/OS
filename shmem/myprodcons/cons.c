@@ -35,13 +35,15 @@ int main(int argc, char const *argv[])
 
         printf("\nIndex :\t%d\nSID :\t%d\nName :\t%s\n\n", *outptr, students[*outptr].SID, students[*outptr].name);
 
-        *outptr = (*outptr + 1) % BUFSIZE;
-        *counter = *counter - 1;
-
         if (students[*outptr].SID == -1)
         {
+            *outptr = (*outptr + 1) % BUFSIZE;
+            *counter = *counter - 1;
             break;
         }
+
+        *outptr = (*outptr + 1) % BUFSIZE;
+        *counter = *counter - 1;
     }
 
     shmctl(id, IPC_RMID, 0);
