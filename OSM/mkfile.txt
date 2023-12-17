@@ -1,0 +1,58 @@
+MAKEFILE
+
+FOR EVERY C FILE OBJECT FILE MUST BE CREATED
+
+SYNTAX
+
+TARGET: DEPENDENCIES
+
+RULE 1
+
+IF A C FILE IS PART OF A SHARED LIBRARY THEN IT SHOULD BE COMPILED LIKE
+
+FILE NAME.o: FILE NAME.C
+	gcc –c -fpic File name.c
+
+Because pic means position independent code and dynamic library code is only
+loaded when it is required
+
+
+Rule 2
+
+If a file is not part of a shared library but it is used in another file
+
+FILE NAME.o: FILE NAME.C
+	gcc –c File name.c
+
+
+Rule 3 static library
+
+If a file’s function are must to be used then it must be part of static library
+For that
+
+Static library name.a: .o file of c file whose functions are discussed
+	ar cr same name as written in red color c file name
+
+
+Rule 4 shared library
+
+Sharedlibraryname.so: filename.o whose functions are part
+	gcc –shared –o Sharedlibraryname.so filename.o
+
+
+Rule 5
+
+Clear:
+	rm *.o and the name of libraries which were created
+
+And the main thing the exe file
+
+Test: the libraries and the main file from where the execution will start
+	gcc –o Test maincode.o, -L. lstatic libraryname.a without lib
+
+With static library only
+
+Test: the libraries and the main file from where the execution will start
+	gcc –o Test maincode.o, -L. lstatic libraryname.a without lib, -wl filepath –l(libraryname.so)
+
+With static library and dynamic library
