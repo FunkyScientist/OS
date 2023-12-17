@@ -1,0 +1,28 @@
+directory=folder
+
+cd: change directory
+mkdir: make directory
+ls: list (directory content)
+pwd: print working directory
+sudo: super user do (run as admin)
+gcc: compiler
+./a.out : ouput
+
+
+.  -> current directory 
+..  -> parent directory
+~ -> home directory
+
+
+pipe needs 2 empty indexes. 
+Upper empty index is read end & lower is write end. 
+
+
+600 means you can read and write the file or directory and other users have no access to it.
+
+0777. read, write, & execute for owner, group and others.
+
+
+TO DO
+make file 
+manual 

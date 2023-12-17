@@ -1,0 +1,14 @@
+
+#include <sys/ipc.h>
+#include <sys/shm.h>
+
+int shmget(key_t key, size_t size, int shmflg); key identifies shared segment, size of shared segment, shmflag is the permissions
+on success, this func returns a valid identifier, which will be used in shmat(attach) func to attach sh segment to address space of process
+
+
+
+
+#include <sys/stat.h>
+#include <sys/shm.h>
+void *shmat(int shmid, const void* shmaddr, int shmflg);
+shmid is the value returned by shmget func, shmadd is the address where to attach shared segment to the calling func. 

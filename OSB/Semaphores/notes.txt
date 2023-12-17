@@ -1,0 +1,4 @@
+sem_t : declare a variable with sem_t datatype
+sem_init() : func to initialize semaphore variable
+sem_wait() : func used before entering critical section, used to check whether resource is free or not
+sem_post() : ~signal [increment] 
